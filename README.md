@@ -21,6 +21,29 @@
 ```
 
 
+- download typescript watch package
+
+```bash
+    npm i tsc-watch --save-dev
+```
+
+    - edit debug in package.json
+    ```javascript
+        "start": "tsc-watch --onSuccess \"node ./dist/server.js\""
+    ```
+
+
+    - edit tsconfig.json, as of now it will compile everything in src folder. Move index.ts file in to src folder
+    ```javascript
+        "include": ["src/**/*"],
+    ```
+
+    - add this line in compilerOptions
+    ```javascript
+        "outDir": "dist"
+    ```
+
+
 ### First step to do TS
 
 - Create tsconfig.json to set up some rules :
@@ -41,7 +64,7 @@
     - When you type some TS code, type tsc in your terminal.
     - JS and JS map file will be creted.
 
-*** Compile the code with normal JS because Node.js cannot compile TS ***
+~~~ Compile the code with normal JS because Node.js cannot compile TS ~~~
 
 ### Debug TS
 
