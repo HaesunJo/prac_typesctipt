@@ -28,17 +28,23 @@
 ```
 
     - edit debug in package.json
+
     ```javascript
         "start": "tsc-watch --onSuccess \"node ./dist/server.js\""
     ```
 
 
     - edit tsconfig.json, as of now it will compile everything in src folder. Move index.ts file in to src folder
+
+
     ```javascript
         "include": ["src/**/*"],
     ```
 
+
     - add this line in compilerOptions
+
+
     ```javascript
         "outDir": "dist"
     ```
