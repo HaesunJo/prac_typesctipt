@@ -1,22 +1,25 @@
 // console.log("hello world");
 
-// const name = "Haillie",
-//         age = "29",
-//         gender = "famale";
+// create interface, it works only in TS
+interface Human {
+    name: string;
+    age: number;
+    gender: string;
+}
+
+// creaet Obj
+const person = {
+    name: "Haillie",
+    gender: "female",
+    age: 1993
+};
+
 
 // this will return string value
-const sayHi = (name: string , age: number, gender: string): string => {
-    return `Hello, ${name}, You are ${age}, and you are a ${gender}! Nice to meet you.`;
+const sayHi = (person: Human): string => {
+    return `Hello, ${person.name}, You are born in ${person.age}, and you are a ${person.gender}! Nice to meet you.`;
 }
 
-
-const sayHiVoid = (name: string , age: number, gender: string): void => {
-    return console.log(`Hello, ${name}, You are ${age}, and you are a ${gender}! Nice to meet you.`);
-}
-
-sayHiVoid("Haillie-void", 1993, "famale");
-
-console.log(sayHi("Haillie", 1993, "famale"));
-
+console.log(sayHi(person));
 // if you don't declare export{}, TS will compain and show you an error. it's a rule.
 export {};

@@ -114,3 +114,38 @@ it will be shown as "undefined" in console:
 
     Hello, Haillie, You are 29, and you are a undefined! Nice to meet you.
 ```
+
+
+
+### Use Interface and Object
+- Make an interface, thie doesn't work in regular JS but class.
+
+```javascript
+    interface Human {
+    name: string;
+    age: number;
+    gender: string;
+}
+```
+
+
+- Create an Object
+
+```javascript
+    const person = {
+        name: "Haillie",
+        gender: "female",
+        age: 1993
+    };
+```
+
+
+- How to this will be used is:
+```javascript
+    const sayHi = (person: Human): string => {
+    return `Hello, ${person.name}, You are born in ${person.age}, and you are a ${person.gender}!
+     Nice to meet you.`;
+}
+
+console.log(sayHi(person));
+```

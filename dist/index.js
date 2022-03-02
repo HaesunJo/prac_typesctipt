@@ -1,16 +1,15 @@
 "use strict";
 // console.log("hello world");
 Object.defineProperty(exports, "__esModule", { value: true });
-// const name = "Haillie",
-//         age = "29",
-//         gender = "famale";
+// creaet Obj
+const person = {
+    name: "Haillie",
+    gender: "female",
+    age: 1993
+};
 // this will return string value
-const sayHi = (name, age, gender) => {
-    return `Hello, ${name}, You are ${age}, and you are a ${gender}! Nice to meet you.`;
+const sayHi = (person) => {
+    return `Hello, ${person.name}, You are born in ${person.age}, and you are a ${person.gender}! Nice to meet you.`;
 };
-const sayHiVoid = (name, age, gender) => {
-    return console.log(`Hello, ${name}, You are ${age}, and you are a ${gender}! Nice to meet you.`);
-};
-sayHiVoid("Haillie-void", 1993, "famale");
-console.log(sayHi("Haillie", 1993, "famale"));
+console.log(sayHi(person));
 //# sourceMappingURL=index.js.map
