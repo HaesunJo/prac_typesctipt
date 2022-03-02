@@ -194,6 +194,6 @@ const sayHi = (person: Human): string => {
 }
 
 console.log(sayHi(person));
-// if you don't declare export{}, TS will compain and show you an error. it's a rule.
+// if you don't declare export{}, TS will complain and show you an error. it's a rule.
 export {};
 ```
