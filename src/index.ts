@@ -1,25 +1,28 @@
-// console.log("hello world");
+class Block {
+		public index: number;
+		public hash: string;
+		public previousHash: string;
+		public data: string;
+		public timestamp: number;
 
-// create interface, it works only in TS
-interface Human {
-    name: string;
-    age: number;
-    gender: string;
+		constructor( 
+				index: number,
+				hash: string,
+				previousHash: string,
+				data: string,
+				timestamp: number) {
+					this.index = index;
+					this.hash = hash;
+					this.previousHash = previousHash;
+					this.data = data;
+					this.timestamp = timestamp;
+		}
 }
 
-// creaet Obj
-const person = {
-    name: "Haillie",
-    gender: "female",
-    age: 1993
-};
+const genesisBlock:Block = new Block(0, "hash20220301", "", "Hello", 123456789);
 
+let blockchain: [Block] = [genesisBlock];
 
-// this will return string value
-const sayHi = (person: Human): string => {
-    return `Hello, ${person.name}, You are born in ${person.age}, and you are a ${person.gender}! Nice to meet you.`;
-}
+console.log(blockchain);
 
-console.log(sayHi(person));
-// if you don't declare export{}, TS will compain and show you an error. it's a rule.
 export {};

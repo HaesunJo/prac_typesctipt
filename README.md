@@ -118,7 +118,7 @@ it will be shown as "undefined" in console:
 
 
 ### Use Interface and Object
-- Make an interface, thie doesn't work in regular JS but class.
+- Make an interface, thie doesn't compile to JS. If you want to do something like Interface, you can do 'class'
 
 ```javascript
     interface Human {
@@ -148,4 +148,51 @@ it will be shown as "undefined" in console:
 }
 
 console.log(sayHi(person));
+```
+
+
+- Practice code
+```javascript
+// console.log("hello world");
+
+// create interface, it works only in TS, doesn't compile to JS
+// but if you use interface is more secure on the TS side.
+// if you work with react, espress, you have to use class
+// interface Human {
+//     name: string;
+//     age: number;
+//     gender: string;
+// }
+
+// creaet Obj
+// const person = {
+//     name: "Haillie",
+//     gender: "female",
+//     age: 1993
+// };
+
+// if you wannt to something like interface, you can go with class
+class Human {
+    public name: string;
+    public age: number;
+    public gender: string;
+
+    constructor(name: string, age: number, gender: string) {
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+    }
+}
+
+const person = new Human("Haillie - work with class", 1993, "famale");
+
+
+// this will return string value
+const sayHi = (person: Human): string => {
+    return `Hello, ${person.name}, You are born in ${person.age}, and you are a ${person.gender}! Nice to meet you.`;
+}
+
+console.log(sayHi(person));
+// if you don't declare export{}, TS will compain and show you an error. it's a rule.
+export {};
 ```
