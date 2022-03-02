@@ -70,8 +70,7 @@
     - When you type some TS code, type tsc in your terminal.
     - JS and JS map file will be creted.
 
-~~~ Compile the code with normal JS because Node.js cannot compile TS ~~~
-
+- Compile the code with normal JS because Node.js cannot compile TS
 
 
 ### Debug TS
