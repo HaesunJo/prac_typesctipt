@@ -27,7 +27,7 @@
     npm i tsc-watch --save-dev
 ```
 
-    - edit debug in package.json
+- edit debug in package.json
 
     ```javascript
         "start": "tsc-watch --onSuccess \"node ./dist/server.js\""
