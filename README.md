@@ -72,6 +72,8 @@
 
 ~~~ Compile the code with normal JS because Node.js cannot compile TS ~~~
 
+
+
 ### Debug TS
 
 - Add these codes below, when you type "npm start", tsc will be executed 
