@@ -197,3 +197,20 @@ console.log(sayHi(person));
 // if you don't declare export{}, TS will complain and show you an error. it's a rule.
 export {};
 ```
+
+
+
+### Install Crypto-JS
+- To make a new block, Hash needs to be calculated, refer to the [link](https://www.npmjs.com/package/crypto-js) 
+
+
+```bash
+	npm install crypto-js
+```
+
+- and import crypto-js
+
+
+```javacsript
+	import * as Crypto from "crypto-js";
+```

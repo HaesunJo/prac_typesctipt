@@ -10,9 +10,11 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "dev-server": "tsc-watch --noClear -p ./src/tsconfig.json --onSuccess \"node ./dist/index.js\"",
         "tsc-watch": "^4.6.0",
-        "typescript": "^4.6.2",
-        "dev-server": "tsc-watch --noClear -p ./src/tsconfig.json --onSuccess \"node ./dist/index.js\""
-
+        "typescript": "^4.6.2"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1"
     }
 }
